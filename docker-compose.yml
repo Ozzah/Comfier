@@ -1,18 +1,18 @@
-version: '3.8'
 services:
   comfier:
     build:
       context: .
       dockerfile: Dockerfile
       args:
-        - groupid: 1000
-        - userid: 1000
+        groupid: 1000
+        userid: 1000
     image: ozzah/comfier:latest
     user: 1000:1000
     volumes:
       - /path/to/models/:/ComfyUI/models
       - /path/to/input:/ComfyUI/input
       - /path/to/output:/ComfyUI/output
+      - /path/to/workflows:/ComfyUI/pysssss-workflows
     network_mode: host
     deploy:
       resources:
