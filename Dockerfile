@@ -22,6 +22,10 @@ RUN pip install -r /ComfyUI/custom_nodes/ComfyUI-Manager/requirements.txt || tru
 RUN git clone https://github.com/comfyanonymous/ComfyUI_TensorRT.git /ComfyUI/custom_nodes/ComfyUI_TensorRT
 RUN pip install -r /ComfyUI/custom_nodes/ComfyUI_TensorRT/requirements.txt || true
 
+# ComfyUI Custom Scripts
+RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git /ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+RUN pip install -r /ComfyUI/custom_nodes/ComfyUI-Custom-Scripts/requirements.txt || true
+
 # Segment Anything
 RUN git clone https://github.com/storyicon/comfyui_segment_anything.git /ComfyUI/custom_nodes/comfyui_segment_anything
 RUN pip install -r /ComfyUI/custom_nodes/comfyui_segment_anything/requirements.txt || true
