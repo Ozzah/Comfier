@@ -26,8 +26,13 @@ I've tested this on Ubuntu 24.04, but I see no reason it wouldn't work on other 
 1. Navigate to [http://127.0.0.1:8188](http://127.0.0.1:8188) in your browser.
 1. You can use <kbd>ctrl</kbd>+<kbd>c</kbd> to terminate ComfyUI.
 
-_Note: You need to restart the container each time you add anything to the `models` volume._
+## Important note about Licences
+When you build the image, quite a number of git repos are pulled in, and for each of them their dependencies are installed.
+During container startup, quite a number of models are downloaded to get you up and running quickly.
+Each of these packages, dependencies, and models have their own licences.
+I haven't gone through them one-by-one (yet), but I believe a lot of them are GPLv3, which is a copyleft licence.
+Some of the models, such as Stable Diffusion 3, also have non-commercial clauses attached.
 
 ## To-Do:
-* I indend to update this soon with a few useful plug-ins that I have been playing with.
-* I'd also like to set up the [`start.sh`](start.sh) script to auto-download some popular models to get you started even quicker, but I need to look into the legality of this first.
+* I will add the list of imported repos and models here, along with their licences.
+* I will release a sample workflow that demonstrates how to do a number of common things, e.g. generation, face detailing, segmentation, inpainting, upscaling, etc.
