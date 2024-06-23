@@ -107,4 +107,4 @@ wget -nc -O /ComfyUI/models/sams/mobile_sam.pt https://github.com/ChaoningZhang/
 wget -nc -O /ComfyUI/models/ultralytics/bbox/face_yolov8m.pt https://huggingface.co/datasets/Gourieff/ReActor/resolve/main/models/detection/bbox/face_yolov8m.pt?download=true
 wget -nc -O /ComfyUI/models/insightface/inswapper_128.onnx https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128.onnx
 
-python main.py
+python main.py "$@"

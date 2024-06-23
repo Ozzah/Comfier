@@ -6,6 +6,7 @@ services:
       args:
         groupid: 1000
         userid: 1000
+    command: --lowvram # Optional, other options are --highvram, --novram, --cpu
     image: ozzah/comfier:latest
     user: 1000:1000
     volumes:

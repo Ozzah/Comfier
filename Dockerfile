@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:2.3.0-cuda12.1-cudnn8-devel
+FROM pytorch/pytorch:2.3.1-cuda12.1-cudnn8-devel
 
 # Set up arguments
 ARG grouid=1000
