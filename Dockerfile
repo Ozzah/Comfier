@@ -1,7 +1,7 @@
 FROM pytorch/pytorch:2.3.1-cuda12.1-cudnn8-devel
 
 # Set up arguments
-ARG grouid=1000
+ARG groupid=1000
 ARG userid=1000
 
 # Install dependencies
@@ -85,9 +85,9 @@ COPY start.sh /ComfyUI/start.sh
 RUN chmod +x /ComfyUI/start.sh
 
 # Set up user
-RUN groupadd -g ${grouid} comfygroup
-RUN useradd -u ${userid} -g ${grouid} --create-home comfyuser
-RUN chown -R comfyuser:comfygroup /ComfyUI
+RUN groupadd -g ${groupid} comfygroup
+RUN useradd -u ${userid} -g ${groupid} --create-home comfyuser
+RUN chown -R ${groupid}:${groupid} /ComfyUI
 
 ENV PATH="/home/comfyuser/.local/bin:${PATH}"
 
